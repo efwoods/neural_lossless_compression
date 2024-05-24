@@ -8,8 +8,8 @@ get_file_size() {
 }
 
 # change these to match files used for encoder and decoder
-encoder_file_name="encode.py"
-decoder_file_name="decode.py"
+encoder_file_name="./copy_coding/encode.py"
+decoder_file_name="./copy_coding/decode.py"
 # extracts the text of the encode.py and decode.py and formats it into a executable script that is 
 #     compatible with the rest of the code (to make editor extentions useable and debugging easier).
 #     This is usually not necessary but might be a helpful measure later (especially if you are writing 
@@ -17,6 +17,10 @@ decoder_file_name="decode.py"
 ./gen_exe $encoder_file_name encode
 ./gen_exe $decoder_file_name decode
 # TODO: I have not thought about what to do for imports for python files. 
+
+# Create the CSV file to log compression results
+csv_file="compression_results.csv"
+echo "file_name,file_size,compressed_size" > "$csv_file"
 
 total_size_raw=0
 encoder_size=$(get_file_size encode)
@@ -37,6 +41,7 @@ do
 
   if diff -q "$file" "$decompressed_file_path" > /dev/null; then
       echo "${file} losslessly compressed from ${file_size} bytes to ${compressed_size} bytes"
+      echo "$(basename "$file"),${file_size},${compressed_size}" >> "$csv_file"
   else
       echo "ERROR: ${file} and ${decompressed_file_path} are different."
       exit 1

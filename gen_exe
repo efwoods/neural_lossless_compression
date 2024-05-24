@@ -25,4 +25,3 @@ shebang_line="#!/usr/bin/env python3"
 # Make the output file executable
 chmod +x "$output_file"
 
-echo "The shebang line has been added to $output_file"
