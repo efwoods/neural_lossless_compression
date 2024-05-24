@@ -12,7 +12,7 @@ If you have a solution, email compression@neuralink.com
 
 I've set up the repo to help people get started, essentially have made some edits to the `./eval.sh` code, created a helper for creating a script from python files, and a notebook to start exploring the dataset. 
 
-## Repo Structure
+## Repo Guideline
 
 I want to encourage people to work on this project and collaborate together to explore different approaches to this problem. 
 
