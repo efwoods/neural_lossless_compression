@@ -4,8 +4,19 @@ rm -rf data
 unzip data.zip
 
 get_file_size() {
-  find "$1" -printf "%s\n"
+  gfind "$1" -printf "%s\n"
 }
+
+# change these to match files used for encoder and decoder
+encoder_file_name="encode.py"
+decoder_file_name="decode.py"
+# extracts the text of the encode.py and decode.py and formats it into a executable script that is 
+#     compatible with the rest of the code (to make editor extentions useable and debugging easier).
+#     This is usually not necessary but might be a helpful measure later (especially if you are writing 
+#     code in other languages with compilation steps that can be added to gen_exe).
+./gen_exe $encoder_file_name encode
+./gen_exe $decoder_file_name decode
+# TODO: I have not thought about what to do for imports for python files. 
 
 total_size_raw=0
 encoder_size=$(get_file_size encode)
