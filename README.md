@@ -35,6 +35,7 @@ Evaluation of the encoding and decoding scripts that you write are carried out b
 
 List of modifications made:
 - Added the `gen_exe` script, which gets called to create the `encode` and `decode` executables. This makes it slightly easier for debugging purposes, and will make it easier when attempting different languages or setups (which we should do!). 
+    - update, I have added C compilation to the `gen_exe` script
 - The encoded size and decoded size of every file is saved in `compressed_results.csv` so that it's easier to analyse performance.
 
 ## Ideas for Starting Points

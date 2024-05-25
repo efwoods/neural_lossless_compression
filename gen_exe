@@ -13,18 +13,30 @@ fi
 input_file="$1"
 output_file="$2"
 
-# Define the shebang line
-shebang_line="#!/usr/bin/env python3"
 
-# Prepend the shebang line and save to the new file
-{
-  echo "$shebang_line"
-  cat "$input_file"
-} > "$output_file"
+extension="${input_file##*.}"
 
-# # compile Python file -> FIXME: the compiled code seems to run a lot slower than the
-  #     uncompiled version, need to take a look at this later
-# pyinstaller --onefile --optimize=2 --name $output_file --distpath ./ $input_file
+case "$extension" in 
+  py)
+    # Define the shebang line
+    shebang_line="#!/usr/bin/env python3"
+
+    # Prepend the shebang line and save to the new file
+    {
+      echo "$shebang_line"
+      cat "$input_file"
+    } > "$output_file"
+    ;;
+
+    # # compile Python file -> FIXME: the compiled code seems to run a lot slower than the
+      #     uncompiled version, need to take a look at this later
+    # pyinstaller --onefile --optimize=2 --name $output_file --distpath ./ $input_file
+  c)
+    gcc $input_file -o $output_file
+    ;;
+esac
+
+
 
 
 # Make the output file executable
