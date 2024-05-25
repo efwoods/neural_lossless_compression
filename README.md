@@ -54,6 +54,7 @@ A fundemental flaw of zip is that it does not compress across files. [A quick se
 ### Other Languages
 
 Currently, I have started thinking about this in Python, and that's fine for initial experiments, but I do this it will be worthwhile for both speed and memory to code up solutions in C. 
+- Added code to open and read data from a `.wav` file, see `data_exploration_C`. An interesting note is that the file uses the 16-bit .wav encoding, even though the data has a 10-bit resolution. That's an easy 1.6x compression factor, although this is likely not what they had in mind. 
 
 
 
