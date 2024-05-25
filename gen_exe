@@ -22,6 +22,11 @@ shebang_line="#!/usr/bin/env python3"
   cat "$input_file"
 } > "$output_file"
 
+# # compile Python file -> FIXME: the compiled code seems to run a lot slower than the
+  #     uncompiled version, need to take a look at this later
+# pyinstaller --onefile --optimize=2 --name $output_file --distpath ./ $input_file
+
+
 # Make the output file executable
 chmod +x "$output_file"
 
