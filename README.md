@@ -1,5 +1,7 @@
 # Neuralink Lossless Compression Challenge - NT@B 
 
+**NOTE: If you are browsing the repo, make sure to check out the other branches! The main serves mainly as template/intro.**
+
 NT@B repo of approaches to tackle Neuralink's Lossless Compression problem. The statement from their [challenge website](https://content.neuralink.com/compression-challenge/README.html):
 
 >This Neuralink is implanted in the motor cortex of a non-human primate, and recordings were made while playing a video game, like [this](https://www.youtube.com/watch?v=rsCul1sp4hQ).
