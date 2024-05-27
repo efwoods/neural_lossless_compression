@@ -16,7 +16,7 @@ I've set up the repo to help people get started, essentially have made some edit
 
 I want to encourage people to work on this project and collaborate together to explore different approaches to this problem. 
 
-Keep different approaches in different remote branches (avoid pushing to the main branch). Generally, naming for branches should be descriptive of the approach you're using. 
+Keep different attempts in different remote branches (avoid pushing to the main branch).
 
 Keep your code for a specific approach in a stand-alone folder (e.g. `./copy_coding/` contains the python scripts), and add a README in the folder explaining the approach and summary statistics for the evaluation method. A notebook analysing the method and its performance would also be helpful.
 

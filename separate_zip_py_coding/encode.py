@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import argv, exit
 from zipfile import ZipFile, ZIP_DEFLATED, ZIP_STORED, ZIP_BZIP2, ZIP_LZMA
 from os.path import exists
