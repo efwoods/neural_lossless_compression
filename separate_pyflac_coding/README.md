@@ -7,5 +7,7 @@ Oddly enough, even though the data should be a good approximation to audio data,
 
 
 Original size (bytes): 146800526 
+
 Compressed size (bytes): 98552865 
+
 Compression ratio: 1.48 
