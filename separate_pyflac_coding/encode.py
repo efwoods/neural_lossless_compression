@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import pyflac
 from pathlib import Path
 from sys import argv, exit

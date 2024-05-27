@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import argv, exit
 from shutil import copy
 from os import remove
